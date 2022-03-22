@@ -47,12 +47,14 @@ function FormClient({ ings }) {
           type="text"
           required
           value={name}
+          placeholder="Name"
           onChange={(e) => setName(e.target.value)}
         ></input>
         <label>Last Name: </label>
         <input
           type="text"
           required
+          placeholder="Last Name"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
         ></input>
@@ -60,6 +62,7 @@ function FormClient({ ings }) {
         <input
           type="tel"
           required
+          placeholder="Phone"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         ></input>

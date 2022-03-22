@@ -21,7 +21,7 @@ function Home() {
         style={{ width: "80%", margin: "auto" }}
       />
       <button className="home-button" onClick={handleClick}>
-        Customize
+        Create
       </button>
     </div>
   );

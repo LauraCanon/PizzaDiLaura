@@ -7,6 +7,7 @@ Para el desarrollo de Pizza Di Laura implementé las siguientes librerías:
 1. "react-router-dom" para el enrutamiento de mis componentes
 2. "json-server" que me permite contruir un restAPI fake, usando un JSON file
 3. "lottie-react" para agregar animaciones
+4. "cypress" que me permite ejecutar pruebas
 
 Como se desarrolló Pizza Di Laura:
 
@@ -27,6 +28,8 @@ Como se desarrolló Pizza Di Laura:
    Hice uso de un custom hook para poder reutilizar lógica de estado (useFetch.js). La función que contiene mi hook, recibe como parámetro una URL; de esta forma, podrá ser reutilizada en diferentes componentes
    En el archivo db.json encontrarán las ordenes que han sido creadas hasta el momento con la información solicitada al momento de personalizar la pizza.
 
+4. Hice uso de cypress para realizar pruebas en mi aplicación. Las pruebas realizadas fueron de navegación por la aplicación, ordenar una pizza, diligenciar el formulario de solicitud de orden, validación del historial de órdenes, ver el detalle de la órden y finalmente eliminarla.
+
 Con este proyecto podrás personalizar la pizza que desees; podrás elegir los ingredientes que gustes (podrás también eliminarlos), estarás informado del precio por cada adición y podrás conocer el precio final antes de realizar la orden. Cuando tengas personalizada tu pizza, deberás diligenciar un formulario con tus datos personales y fecha en que la requieras (de esta forma podré tener el tracking de tu información y de los ingredientes que seleccionaste)
 
 Para iniciar el proyecto sigue las siguientes instrucciones:
@@ -36,3 +39,4 @@ Para iniciar el proyecto sigue las siguientes instrucciones:
 3. Corre "npm start" para ejecutar el proyecto en el puerto 3000
 4. Corre "npx json-server --watch data/db.json --port 8000" para montar el servidor
 5. Navega y personaliza tu propia pizza
+6. Corre "npx cypress open" Para validar las pruebas realizadas
