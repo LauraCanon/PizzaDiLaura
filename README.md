@@ -28,7 +28,7 @@ Como se desarrolló Pizza Di Laura:
    Hice uso de un custom hook para poder reutilizar lógica de estado (useFetch.js). La función que contiene mi hook, recibe como parámetro una URL; de esta forma, podrá ser reutilizada en diferentes componentes
    En el archivo db.json encontrarán las ordenes que han sido creadas hasta el momento con la información solicitada al momento de personalizar la pizza.
 
-4. Hice uso de cypress para realizar pruebas en mi aplicación. Las pruebas realizadas fueron de navegación por la aplicación, ordenar una pizza, diligenciar el formulario de solicitud de orden, validación del historial de órdenes, ver el detalle de la órden y finalmente eliminarla.
+4. Hice uso de cypress para realizar pruebas en mi aplicación. Las pruebas realizadas fueron de navegación por la aplicación, ordenar una pizza, diligenciar el formulario de solicitud de orden, validación del historial de órdenes, ver el detalle de la órden y finalmente eliminarla (el archivo a validar es navigate.spec.js dentro de la carpeta integration en cypress).
 
 Con este proyecto podrás personalizar la pizza que desees; podrás elegir los ingredientes que gustes (podrás también eliminarlos), estarás informado del precio por cada adición y podrás conocer el precio final antes de realizar la orden. Cuando tengas personalizada tu pizza, deberás diligenciar un formulario con tus datos personales y fecha en que la requieras (de esta forma podré tener el tracking de tu información y de los ingredientes que seleccionaste)
 
