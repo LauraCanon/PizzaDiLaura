@@ -1,0 +1,32 @@
+.new-order {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  border: rgb(228, 225, 225) 1px solid;
+}
+.new-order h2 {
+  margin-bottom: 15px;
+}
+.new-order label {
+  text-align: left;
+  display: block;
+  font-weight: 600;
+}
+.new-order input {
+  width: 100%;
+  padding: 7px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.new-order button {
+  color: white;
+  background-color: rgb(197, 76, 55);
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}

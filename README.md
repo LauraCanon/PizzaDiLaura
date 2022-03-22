@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Pizza Di Laura
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue realizado con [Create React App](https://github.com/facebook/create-react-app)
 
-## Available Scripts
+Para el desarrollo de Pizza Di Laura implementé las siguientes librerías:
 
-In the project directory, you can run:
+1. "react-router-dom" para el enrutamiento de mis componentes
+2. "json-server" que me permite contruir un restAPI fake, usando un JSON file
+3. "lottie-react" para agregar animaciones
 
-### `npm start`
+Como se desarrolló Pizza Di Laura:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Separé la funcionalidad de la aplicación en componentes reutilizables.
+2. La data que manejé en la aplicación, está almacenada en la carpeta static. Hice uso del archivo ingredients para mapear los valores contenidos en él y renderizar el componente Customize de forma que el usuario pueda interactuar con ellos.
+   Hice uso de useState para manejar el estado local.
+3. Instalé JSON server para generar mi Fake API y creé una carpeta data junto con un archivo db.json que contenía datos de ejemplo.
+   Puse en marcha mi API con el comando json-server apuntando al archivo con los datos "npx json-server --watch data/db.json --port 8000". Accediendo a la URL local, en este caso http://localhost:8000, tengo una página estática con los endpoints de mi API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   Mis endpoints son:
 
-### `npm test`
+   - /orders GET Fetch all orders
+   - /orders/:id GET Fetch a single order
+   - /orders POST Add a new order
+   - /orders/:id DELETE Delete an order
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   De esta forma y mediante el método fetch, tenía acceso a la data de mi servidor para renderizarla o bien, para almacenarla.
+   Hice uso de un custom hook para poder reutilizar lógica de estado (useFetch.js). La función que contiene mi hook, recibe como parámetro una URL; de esta forma, podrá ser reutilizada en diferentes componentes
+   En el archivo db.json encontrarán las ordenes que han sido creadas hasta el momento con la información solicitada al momento de personalizar la pizza.
 
-### `npm run build`
+Con este proyecto podrás personalizar la pizza que desees; podrás elegir los ingredientes que gustes (podrás también eliminarlos), estarás informado del precio por cada adición y podrás conocer el precio final antes de realizar la orden. Cuando tengas personalizada tu pizza, deberás diligenciar un formulario con tus datos personales y fecha en que la requieras (de esta forma podré tener el tracking de tu información y de los ingredientes que seleccionaste)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para iniciar el proyecto sigue las siguientes instrucciones:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clona el repositorio
+2. Corre "npm install" para que tengas acceso a las dependencias del proyecto
+3. Corre "npm start" para ejecutar el proyecto en el puerto 3000
+4. Corre "npx json-server --watch data/db.json --port 8000" para montar el servidor
+5. Navega y personaliza tu propia pizza

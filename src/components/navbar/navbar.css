@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* Targeting every element */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+
+.navbar {
+  border-bottom: rgb(245, 242, 242) 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 15px;
+  max-width: 800px;
+}
+.navbar .navbar-title {
+  color: rgb(197, 76, 55);
+  margin-left: 50px;
+}
+.navbar .links {
+  margin-left: auto;
+  text-align: right;
+}
+.navbar a {
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 15px;
+}
+.navbar a:hover {
+  color: rgb(197, 76, 55);
+}
+.navbar .nav-btn {
+  cursor: pointer;
+  padding: 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+  }
+  .navbar-title {
+    margin-right: 100px;
+  }
+  .navbar .links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(197, 76, 55);
+    gap: 1rem;
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+  .navbar .responsive_nav {
+    transform: none;
+  }
+  .links .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .navbar a:hover {
+    color: white;
+  }
+}
+
+/* .navbar {
+  border-bottom: rgb(245, 242, 242) 1px solid;
+  display: block;
+  /* margin: 0 auto; */
+/* padding: 20px;
+}
+.navbar h1 {
+  color: rgb(197, 76, 55);
+  text-align: center;
+}
+.links {
+  text-align: center;
+}
+.navbar a {
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px;
+} */
